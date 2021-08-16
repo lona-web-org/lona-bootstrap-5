@@ -1,0 +1,3 @@
+recursive-include lona_bootstrap_5/static *.css
+recursive-include lona_bootstrap_5/static *.js
+recursive-include lona_bootstrap_5/static *.map
