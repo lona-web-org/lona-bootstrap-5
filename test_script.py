@@ -94,9 +94,12 @@ class MyView(LonaView):
             elif input_event.node is self.modal.close_button:
                 print('modal close button clicked')
 
+                self.modal.hide()
+
             elif input_event.node in self.modal.buttons:
                 print(input_event.node, 'was clicked')
 
                 self.modal.hide()
+
 
 app.run(port=8080)
