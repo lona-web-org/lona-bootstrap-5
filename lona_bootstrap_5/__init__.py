@@ -1,4 +1,5 @@
 try:
+    from .progress import Progress  # NOQA
     from .modal import Modal  # NOQA
     from .nodes import *  # NOQA
 

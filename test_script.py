@@ -13,6 +13,7 @@ from lona_bootstrap_5 import (
     LightButton,
     DarkButton,
     LinkButton,
+    Progress,
     Modal,
 )
 
@@ -72,6 +73,10 @@ class MyView(LonaView):
             H2('Modal'),
             self.modal_trigger,
             self.modal,
+
+            # Progress
+            H2('Progress'),
+            Progress(percentage=35, background='success'),
         )
 
         while True:
