@@ -16,7 +16,7 @@ Supported components:
 Grid System
 -----------
 
-Upstream documentation: `Link <https://getbootstrap.com/docs/5.0/layout/grid/>`_
+Upstream documentation: `Link <https://getbootstrap.com/docs/5.0/layout/grid/>`__
 
 .. code-block:: python
 
@@ -37,10 +37,10 @@ Upstream documentation: `Link <https://getbootstrap.com/docs/5.0/layout/grid/>`_
 TextInputs and TextAreas
 ------------------------
 
-Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/forms/overview/>`_
+Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/forms/overview/>`__
 
 ``TextInput`` and ``TextArea`` work exactly like
-`Lona TextInputs <https://lona-web.org/end-user-documentation/html.html#textinput-textarea>`_
+`Lona TextInputs <https://lona-web.org/end-user-documentation/html.html#textinput-textarea>`__
 and are just styled by Bootstrap.
 
 
@@ -52,10 +52,10 @@ and are just styled by Bootstrap.
 Buttons
 -------
 
-Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/buttons/>`_
+Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/buttons/>`__
 
 ``Button`` works exactly like
-`Lona Button <https://lona-web.org/end-user-documentation/html.html#button>`_
+`Lona Button <https://lona-web.org/end-user-documentation/html.html#button>`__
 and is just styled by Bootstrap.
 
 
@@ -77,7 +77,7 @@ and is just styled by Bootstrap.
 Modal
 -----
 
-Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/modal/>`_
+Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/modal/>`__
 
 .. code-block:: python
 
@@ -161,7 +161,7 @@ Example
 Progress
 --------
 
-Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/progress/>`_
+Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/progress/>`__
 
 .. code-block:: python
 
@@ -174,7 +174,7 @@ Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/prog
 Properties
 ~~~~~~~~~~
 
-* ``Modal.background``: (str) [''|success|info|warning|danger]
+* ``Modal.background``: (str) [''\|success\|info\|warning\|danger]
 * ``Modal.value``: (int) Current progress value between ``0`` and ``100``
 * ``Modal.striped``: (bool) Enables Bootstraps ``striped`` style
 * ``Modal.animated``: (bool) Enables Bootstrap animations
