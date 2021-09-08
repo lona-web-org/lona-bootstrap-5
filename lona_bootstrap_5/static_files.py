@@ -35,7 +35,7 @@ STATIC_FILES = [
     # widgets
     Script(
         name='lona_bootstrap5.widgets',
-        path='bootstrap5-widgets.js',
+        path='static/bootstrap5-widgets.js',
         url='bootstrap5-widgets.js',
         sort_order=SORT_ORDER.LIBRARY,
     ),
