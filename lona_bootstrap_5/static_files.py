@@ -10,7 +10,7 @@ STATIC_FILES = [
         sort_order=SORT_ORDER.FRAMEWORK,
     ),
     StyleSheet(
-        name='bootstrap5.css',
+        name='bootstrap5.min.css.map',
         path='static/bootstrap-5.1.0-dist/css/bootstrap.min.css',
         url='bootstrap5.min.css.map',
         sort_order=SORT_ORDER.FRAMEWORK,
@@ -19,7 +19,7 @@ STATIC_FILES = [
 
     # js files
     Script(
-        name='bootstrap5.bundle.js',
+        name='bootstrap5.bundle.min.js',
         path='static/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js',
         url='bootstrap5.bundle.min.js',
         sort_order=SORT_ORDER.FRAMEWORK,
