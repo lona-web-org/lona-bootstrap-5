@@ -18,6 +18,10 @@ function Bootstrap5Modal(lona_window) {
         this._update();
     };
 
+    this.deconstruct = function() {
+        this.modal.dispose();
+    };
+
     this.data_updated = function() {
         this._update();
     };
