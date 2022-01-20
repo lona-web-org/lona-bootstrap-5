@@ -15,10 +15,18 @@ from lona_bootstrap_5 import (
     LinkButton,
     Progress,
     Modal,
+    PrimaryAlert,
+    DarkAlert,
+    DarkBadge,
+    GrowPrimarySpinner,
+    GrowDangerSpinner,
+    BorderPrimarySpinner,
+    BorderSuccessSpinner,
 )
-
 from lona import LonaApp, LonaView
 from lona.html import H1, H2, HTML
+
+from lona_bootstrap_5.nodes import BorderInfoSpinner, PrimaryBadge
 
 app = LonaApp(__file__)
 
@@ -36,7 +44,6 @@ class MyView(LonaView):
         # modal
         self.modal_trigger = PrimaryButton('Show Modal', _id='show-modal')
         self.modal = Modal()
-
         html = HTML(
             H1('Bootstrap 5'),
 
@@ -68,6 +75,19 @@ class MyView(LonaView):
             LightButton('LightButton'),
             DarkButton('DarkButton'),
             LinkButton('LinkButton'),
+
+            # alerts
+            PrimaryAlert('PrimaryAlert'),
+            DarkAlert('DarkAlert'),
+            # badges
+            PrimaryBadge('PrimaryBadge'),
+            DarkBadge('DarkBadge'),
+
+            GrowPrimarySpinner('Loading...'),
+            GrowDangerSpinner('Warning!'),
+            BorderPrimarySpinner('Test'),
+            BorderSuccessSpinner('Test2'),
+            BorderInfoSpinner(),
 
             # Modal
             H2('Modal'),

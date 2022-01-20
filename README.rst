@@ -9,6 +9,9 @@ Supported components:
 * `Grid System <#grid-system>`_
 * `TextInputs and Textareas <#textinputs-and-textareas>`_
 * `Buttons <#buttons>`_
+* `Spinners <#spinners>`_
+* `Alerts <#alerts>`_
+* `Badges <#badges>`_
 * `Modal <#modal>`_
 * `Progress <#progress>`_
 
@@ -72,6 +75,77 @@ and is just styled by Bootstrap.
         DarkButton,
         LinkButton,
     )
+
+
+Spinners
+--------
+
+Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/spinners/>`__
+
+The first argument will be shown to screen readers, if no arguments are passed the default is "Loading..."
+
+.. code-block:: python
+
+    from lona_bootstrap_5 import (
+        GrowPrimarySpinner,
+        GrowSecondarySpinner,
+        GrowSuccessSpinner,
+        GrowDangerSpinner,
+        GrowWarningSpinner,
+        GrowInfoSpinner,
+        GrowLightSpinner,
+        GrowDarkSpinner,
+        BorderPrimarySpinner,
+        BorderSecondarySpinner,
+        BorderSuccessSpinner,
+        BorderDangerSpinner,
+        BorderWarningSpinner,
+        BorderInfoSpinner,
+        BorderLightSpinner,
+        BorderDarkSpinner,
+    )
+
+    GrowPrimarySpinner("Loading the page...") 
+
+
+Alerts
+------
+
+Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/alerts/>`__
+
+.. code-block:: python
+
+    from lona_bootstrap_5 import (
+        PrimaryAlert,
+        SecondaryAlert,
+        SuccessAlert,
+        DangerAlert,
+        WarningAlert,
+        InfoAlert,
+        LightAlert,
+        DarkAlert,
+    )
+
+
+Badges
+------
+
+Upstream documentation: `Link <https://getbootstrap.com/docs/5.1/components/badge/>`__
+
+.. code-block:: python
+
+    from lona_bootstrap_5 import (
+        PrimaryBadge,
+        SecondaryBadge,
+        SuccessBadge,
+        DangerBadge,
+        WarningBadge,
+        InfoBadge,
+        LightBadge,
+        DarkBadge,
+    )
+
+
 
 
 Modal
