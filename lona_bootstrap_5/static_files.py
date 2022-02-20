@@ -4,30 +4,30 @@ from lona.static_files import StyleSheet, Script, SORT_ORDER
 STATIC_FILES = [
     # css files
     StyleSheet(
-        name='bootstrap5.css',
+        name='bootstrap.css',
         path='static/bootstrap-5.1.0-dist/css/bootstrap.min.css',
-        url='bootstrap5.min.css',
+        url='bootstrap.min.css',
         sort_order=SORT_ORDER.FRAMEWORK,
     ),
     StyleSheet(
-        name='bootstrap5.min.css.map',
-        path='static/bootstrap-5.1.0-dist/css/bootstrap.min.css',
-        url='bootstrap5.min.css.map',
+        name='bootstrap.min.css.map',
+        path='static/bootstrap-5.1.0-dist/css/bootstrap.min.css.map',
+        url='bootstrap.min.css.map',
         sort_order=SORT_ORDER.FRAMEWORK,
         link=False,
     ),
 
     # js files
     Script(
-        name='bootstrap5.bundle.min.js',
+        name='bootstrap.bundle.min.js',
         path='static/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js',
-        url='bootstrap5.bundle.min.js',
+        url='bootstrap.bundle.min.js',
         sort_order=SORT_ORDER.FRAMEWORK,
     ),
     Script(
-        name='bootstrap5.bundle.js',
+        name='bootstrap.bundle.js',
         path='static/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js.map',
-        url='bootstrap5.bundle.min.js.map',
+        url='bootstrap.bundle.min.js.map',
         sort_order=SORT_ORDER.FRAMEWORK,
         link=False,
     ),
@@ -36,7 +36,7 @@ STATIC_FILES = [
     Script(
         name='lona_bootstrap5.widgets',
         path='static/bootstrap5-widgets.js',
-        url='bootstrap5-widgets.js',
+        url='bootstrap-widgets.js',
         sort_order=SORT_ORDER.LIBRARY,
     ),
 ]
