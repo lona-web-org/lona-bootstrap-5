@@ -1,5 +1,4 @@
-from lona.static_files import StyleSheet, Script, SORT_ORDER
-
+from lona.static_files import StaticFile, StyleSheet, Script, SORT_ORDER
 
 STATIC_FILES = [
     # css files
@@ -38,5 +37,27 @@ STATIC_FILES = [
         path='static/bootstrap5-widgets.js',
         url='bootstrap-widgets.js',
         sort_order=SORT_ORDER.LIBRARY,
+    ),
+
+    # icons
+    StyleSheet(
+        name='bootstrap-icons.css',
+        path='static/bootstrap-icons-1.8.1-dist/bootstrap-icons.css',
+        url='bootstrap-icons.css',
+        sort_order=SORT_ORDER.FRAMEWORK,
+    ),
+
+    StaticFile(
+        name='bootstrap-icons.woff',
+        path='static/bootstrap-icons-1.8.1-dist/fonts/bootstrap-icons.woff',
+        url='fonts/bootstrap-icons.woff',
+        link=False,
+    ),
+
+    StaticFile(
+        name='bootstrap-icons.woff2',
+        path='static/bootstrap-icons-1.8.1-dist/fonts/bootstrap-icons.woff2',
+        url='fonts/bootstrap-icons.woff2',
+        link=False,
     ),
 ]
