@@ -1,0 +1,112 @@
+{% set dumps=Lona.import('json.dumps') %}
+{% set get_settings=Lona.import('lona_bootstrap_5.templating.get_settings') %}
+{% set get_menu=Lona.import('lona_bootstrap_5.templating.get_menu') %}
+{% set settings=get_settings(Lona) %}
+{% set menu=get_menu(Lona) %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{ Lona.load_stylesheets() }}
+
+    <style>
+      body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100vh;
+        height: -webkit-fill-available;
+        max-height: 100vh;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+
+      #lona {
+        flex-shrink: 0;
+        height: 100vh;
+        padding: 16px;
+      }
+
+      #message-stack {
+        position: absolute;
+        padding: 16px;
+        width: 30em;
+        left: calc(50% - 15em);
+      }
+
+    </style>
+    <link href="{{ Lona.load_static_file('lona/style.css') }}" rel="stylesheet">
+  </head>
+
+  {% if settings.BOOTSTRAP_5_PAGE_WIDTH %}
+    {% set body_style="background-color: var(--bs-gray-200);" %}
+    {% set page_style="width: " + settings.BOOTSTRAP_5_PAGE_WIDTH + "; background-color: white" %}
+  {% else %}
+    {% set body_style="" %}
+    {% set page_style="" %}
+  {% endif %}
+
+  <body style="{{ body_style }}">
+    <!-- message stack -->
+    <div id="message-stack" class="sticky-top"></div>
+
+    <main>
+      <!-- sidebar -->
+      {% if settings.BOOTSTRAP_5_DARK_NAVIGATION %}
+        {% set navigation_classes="bg-dark text-white" %}
+        {% set navigation_link_classes="text-white" %}
+      {% else %}
+        {% set navigation_classes="bg-light" %}
+        {% set navigation_link_classes="link-dark" %}
+      {% endif %}
+
+      <div id="navigation" class="d-flex flex-column flex-shrink-0 p-3 {{ navigation_classes }}" style="width: {{ settings.BOOTSTRAP_5_SIDEBAR_WIDTH }}">
+
+        <!-- header -->
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none {{ navigation_link_classes }}">
+          <span class="fs-4">{{ settings.BOOTSTRAP_5_TITLE }}</span>
+          {% if settings.BOOTSTRAP_5_VERSION_STRING %}
+            <span>&nbsp;</span>
+            <small class="text-muted" style="margin-bottom: -0.5em">{{ settings.BOOTSTRAP_5_VERSION_STRING }}</small>
+          {% endif %}
+        </a>
+        <hr>
+
+        <!-- menu -->
+        <ul class="nav nav-pills flex-column mb-auto">
+          {% for menu_item in menu %}
+            {% if menu_item.divider %}
+              <hr>
+            {% else %}
+              {% if menu_item.route_name %}
+                {% set url=Lona.server.reverse(route_name=menu_item.route_name, **(menu_item.route_args or {})) %}
+              {% else %}
+                {% set url=menu_item.url %}
+              {% endif %}
+
+              <li class="nav-item">
+                <a href="{{ url }}" class="nav-link text-decoration-none {{ navigation_link_classes }}" aria-current="page">
+                  {% if menu_item.icon %}<i class="bi bi-{{ menu_item.icon }}"></i>{% endif %} {{ menu_item.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- page -->
+      <div id="lona" style="{{ page_style }}"></div>
+    </main>
+
+    {{ Lona.load_scripts() }}
+    <script>
+      {% include "bootstrap_5/main.js" %}
+    </script>
+  </body>
+</html>

@@ -1,4 +1,8 @@
+import os
+
 try:
+    from .templating import MenuItem  # NOQA
+    from .messages import show_alert  # NOQA
     from .progress import Progress  # NOQA
     from .switch import Switch  # NOQA
     from .modal import Modal  # NOQA
@@ -11,3 +15,8 @@ except ImportError:
 
 VERSION = (0, 2)
 VERSION_STRING = '{}'.format('.'.join([str(i) for i in VERSION]))
+
+TEMPLATE_DIR = os.path.join(
+    os.path.dirname(__file__),
+    'templates',
+)

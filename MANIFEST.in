@@ -3,3 +3,5 @@ recursive-include lona_bootstrap_5/static *.js
 recursive-include lona_bootstrap_5/static *.map
 recursive-include lona_bootstrap_5/static *.woff
 recursive-include lona_bootstrap_5/static *.woff2
+recursive-include lona_bootstrap_5/templates *.html
+recursive-include lona_bootstrap_5/templates *.js
