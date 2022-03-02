@@ -1,7 +1,9 @@
 from lona.html import (
+    NumberInput as BaseNumberInput,
     TextInput as BaseTextInput,
     TextArea as BaseTextArea,
     Button as BaseButton,
+    Select as BaseSelect,
     Div as BaseDiv,
     Span,
 )
@@ -166,9 +168,19 @@ class TextInput(BaseTextInput):
     CLASS_LIST = ['form-control']
 
 
+class NumberInput(BaseNumberInput):
+    STATIC_FILES = STATIC_FILES
+    CLASS_LIST = ['form-control']
+
+
 class TextArea(BaseTextArea):
     STATIC_FILES = STATIC_FILES
     CLASS_LIST = ['form-control']
+
+
+class Select(BaseSelect):
+    STATIC_FILES = STATIC_FILES
+    CLASS_LIST = ['form-select']
 
 
 # buttons #####################################################################

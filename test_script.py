@@ -4,6 +4,9 @@ from lona_bootstrap_5 import (
     Row,
     TextInput,
     TextArea,
+    NumberInput,
+    Switch,
+    Select,
     PrimaryButton,
     SecondaryButton,
     SuccessButton,
@@ -62,6 +65,16 @@ class MyView(LonaView):
             # inputs
             H2('Inputs'),
             TextInput(),
+            NumberInput(),
+            Switch(),
+            Switch(value=True),
+            Switch(disabled=True),
+            Select(
+                values=[
+                    ('foo', 'Foo'),
+                    ('bar', 'Bar'),
+                ],
+            ),
             TextArea(),
 
             # Buttons
