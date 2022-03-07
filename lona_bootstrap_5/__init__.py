@@ -13,7 +13,7 @@ except ImportError:
 
     pass
 
-VERSION = (0, 2)
+VERSION = (0, 3)
 VERSION_STRING = '{}'.format('.'.join([str(i) for i in VERSION]))
 
 TEMPLATE_DIR = os.path.join(
