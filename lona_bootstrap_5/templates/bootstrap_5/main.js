@@ -1,4 +1,5 @@
 // setup lona context ---------------------------------------------------------
+window.addEventListener('load', () => {
 var lona_context = new Lona.LonaContext({
     target: '#lona',
     title: '{{ settings.BOOTSTRAP_5_TITLE }}',
@@ -149,3 +150,4 @@ lona_context.add_message_handler(function(lona_context, raw_message) {
 
 // init -----------------------------------------------------------------------
 lona_context.setup();
+});
